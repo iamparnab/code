@@ -11,6 +11,7 @@ arr[o]=0
 arr[u]=0
 distinct_vowels=0
 
+
 while [ $i -lt ${#line} ];do
 
 	if  echo ${line:$i:1} | grep [aeiouAEIOU] >> NULL ;then 
