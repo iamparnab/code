@@ -28,6 +28,9 @@ if [ "$1" = "-e" -a -d $2 ];then
 	cd $2
 	IFS=""
 	for i in *;do
+      if [ "$i" = secure.sh ];then
+         continue
+      fi
 		zip -r DATA $i
 		rm -r $i
 	done
