@@ -1,4 +1,6 @@
-/* An attempt to build an associative array in c */
+/* 
+ * An attempt to build an associative array in c 
+ */
 typedef struct associative_array{
 	char *key;
 	char *value;
@@ -11,7 +13,7 @@ char* get(assoc_array_t *name_of_array,char *key);//retrieve from structure
 
 #include<stdio.h>
 #include<stdlib.h>
-
+#include<string.h>
 int main(){
 	assoc_array_t *age = create_assoc_array();
 	assoc_array_t *marks = create_assoc_array();
@@ -47,9 +49,6 @@ void insert(assoc_array_t *start,char *key, char *value){
 }
 char* get(assoc_array_t *start,char* key){
 	assoc_array_t *ptr = start;
-	
-	#include<string.h>
-
 	while( ptr->next != NULL ){
 		if ( !strcmp(ptr->key,key) ) return ptr->value;
 		ptr = ptr->next;
