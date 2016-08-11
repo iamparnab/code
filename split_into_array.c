@@ -25,7 +25,7 @@ char* substr(char* str,int beg,int end){
  * This function cheks whether a character is
  * delimiter or not
  */
-bool is_it_a_delimeter(char *del,char ch){
+bool is_it_a_delimiter(char *del,char ch){
 	for(int i = 0; i < strlen(del); i++)
 		if ( del[i] == ch )
 			return true;
@@ -34,14 +34,14 @@ bool is_it_a_delimeter(char *del,char ch){
 
 /*
  * This function splits the main string upon a string of
- * delimeter characters and returns an array of
+ * delimiter characters and returns an array of
  * tokens.
  */
 char** split(char* expr,char *del){
       int i = 0;
       char **array = (char**)malloc(sizeof(char*)*20);
       while( i < strlen(expr) ) {
-            if ( is_it_a_delimeter(del,expr[i]) ) {
+            if ( is_it_a_delimiter(del,expr[i]) ) {
             
             	if( i > 0 ){
             		/*
